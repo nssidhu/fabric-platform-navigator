@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081321">
+  <meta name="description" content="Microsoft Fabric analytics and ERP synchronization capability dashboard.">
+  <title>Fabric Platform Navigator | Brookfield</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to Main Content</a>
+
+  <header class="site-header">
+    <a class="brand" href="?view=overview" aria-label="Fabric Platform Navigator home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span><strong>Fabric Platform</strong><small>Capability Navigator</small></span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <a href="?view=overview" data-view-link="overview">Overview</a>
+      <a href="?view=capabilities" data-view-link="capabilities">Capability Map</a>
+      <a href="?view=architecture" data-view-link="architecture">Architecture</a>
+      <a href="?view=decision" data-view-link="decision">Decision Guide</a>
+    </nav>
+    <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to light theme">
+      <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9c0-.5-.04-1-.12-1.47A7 7 0 0 1 12 3Z"/></svg>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="view" data-view="overview" aria-labelledby="overview-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Unified Analytics + Controlled ERP Synchronization</p>
+          <h1 id="overview-title">One Foundation.<br><span>Two Business Paths.</span></h1>
+          <p class="hero-lead">See where Microsoft Fabric provides native capability, where an integration bridge is needed, and which ecosystem options close the operational gaps.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="?view=capabilities">Explore Capability Map <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="?view=architecture">View Reference Architecture</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="OneLake branches into analytics and ERP synchronization">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="core"><span class="core-icon" aria-hidden="true">◇</span><strong>OneLake</strong><small>Shared Bronze Foundation</small></div>
+          <div class="satellite satellite-a"><span>Path A</span><strong>Analytics</strong><small>Bronze → Silver → Gold</small></div>
+          <div class="satellite satellite-b"><span>Path B</span><strong>ERP Sync</strong><small>Dispatch → Worker → Outcome</small></div>
+        </div>
+      </div>
+
+      <div class="content-shell">
+        <section class="metrics" aria-label="Platform summary">
+          <a class="metric-link" href="?view=capabilities&amp;filter=native">
+            <span class="metric-icon blue" aria-hidden="true">◆</span><div><strong id="metric-native">0</strong><span>Native Fabric Capabilities</span><small>View native coverage <i aria-hidden="true">→</i></small></div>
+          </a>
+          <a class="metric-link" href="?view=capabilities&amp;filter=shared">
+            <span class="metric-icon amber" aria-hidden="true">◒</span><div><strong id="metric-shared">0</strong><span>Partial Coverage Areas</span><small>Inspect limitations <i aria-hidden="true">→</i></small></div>
+          </a>
+          <a class="metric-link" href="?view=overview&amp;section=gaps#gap-register">
+            <span class="metric-icon violet" aria-hidden="true">↗</span><div><strong id="metric-gaps">0</strong><span>Documented Platform Gaps</span><small>Review gap responses <i aria-hidden="true">↓</i></small></div>
+          </a>
+          <a class="metric-link" href="?view=architecture">
+            <span class="metric-icon green" aria-hidden="true">✓</span><div><strong>2</strong><span>Independent Business Paths</span><small>Explore both paths <i aria-hidden="true">→</i></small></div>
+          </a>
+        </section>
+
+        <section class="section-block" aria-labelledby="coverage-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">Coverage at a Glance</p><h2 id="coverage-title">What Fabric Covers — and Where to Extend</h2></div>
+            <a class="text-link" href="?view=capabilities">View All Capabilities <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="coverage-grid" id="overview-cards"></div>
+        </section>
+
+        <section class="section-block gap-section" aria-labelledby="gaps-title">
+          <div class="section-heading">
+            <div><p class="eyebrow gap-eyebrow">Explicit Gap Register</p><h2 id="gaps-title">Where Fabric Needs an Extension</h2></div>
+            <p class="section-note">A gap does not mean the architecture fails. It identifies where Fabric needs custom engineering, organizational ownership, Azure services, or a partner product.</p>
+          </div>
+          <div class="gap-register" id="gap-register"></div>
+        </section>
+
+        <section class="principle-banner" aria-labelledby="principle-title">
+          <div class="principle-number">01</div>
+          <div><p class="eyebrow">Core Design Principle</p><h2 id="principle-title">Share trusted source data. Separate operational success.</h2><p>Analytics curation continues even when a destination ERP or synchronization worker is unavailable.</p></div>
+          <div class="principle-tags"><span>Replayable Bronze</span><span>Durable Dispatch</span><span>Independent Recovery</span></div>
+        </section>
+      </div>
+    </section>
+
+    <section class="view content-shell page-view" data-view="capabilities" aria-labelledby="capabilities-title" hidden>
+      <div class="page-intro">
+        <p class="eyebrow">Interactive Capability Model</p>
+        <h1 id="capabilities-title">Fabric Coverage & Gap Map</h1>
+        <p>Select a capability to inspect scope, constraints, and recommended ecosystem responses.</p>
+        <p class="source-note">Product claims and documented limitations link to their supporting Microsoft Learn or trusted vendor source.</p>
+      </div>
+      <div class="toolbar">
+        <label class="search-field">
+          <span class="sr-only">Search capabilities</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.15a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+          <input id="capability-search" name="capability-search" type="search" autocomplete="off" placeholder="Search capabilities, products, or gaps…">
+        </label>
+        <div class="filter-group" aria-label="Filter by coverage">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="native" aria-pressed="false"><i class="dot native"></i>Native</button>
+          <button type="button" data-filter="shared" aria-pressed="false"><i class="dot shared"></i>Partial</button>
+          <button type="button" data-filter="ecosystem" aria-pressed="false"><i class="dot ecosystem"></i>Gap</button>
+        </div>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="capability-groups" id="capability-groups"></div>
+    </section>
+
+    <section class="view content-shell page-view" data-view="architecture" aria-labelledby="architecture-title" hidden>
+      <div class="page-intro split-intro">
+        <div><p class="eyebrow">Reference Architecture</p><h1 id="architecture-title">Ingest Once. Activate Twice.</h1><p>Bronze in OneLake is the common handoff point for governed analytics and controlled operational propagation.</p></div>
+        <div class="legend"><span><i class="dot native"></i>Fabric Native</span><span><i class="dot shared"></i>Partial Coverage</span><span><i class="dot ecosystem"></i>Gap / Extension Required</span></div>
+      </div>
+      <div class="architecture-map">
+        <div class="source-column">
+          <p class="lane-label">Enterprise Sources</p>
+          <button class="arch-node" data-capability="05.2"><span class="node-icon">DB</span><strong>ERP Databases</strong><small>CDC / batch</small></button>
+          <button class="arch-node" data-capability="05.9"><span class="node-icon">EV</span><strong>Events & Streams</strong><small>Kafka / Event Hubs / IoT</small></button>
+          <button class="arch-node" data-capability="05.2"><span class="node-icon">FS</span><strong>Cloud Storage</strong><small>ADLS / S3 / GCS / OneLake</small></button>
+        </div>
+        <div class="flow-arrow" aria-hidden="true"><span>Ingestion</span>→</div>
+        <div class="foundation-column">
+          <p class="lane-label">Common Foundation</p>
+          <button class="arch-node foundation" data-capability="05.1"><span class="fabric-glyph">◇</span><strong>Bronze in OneLake</strong><small>Raw · replayable · source aligned</small></button>
+          <div class="branch-marker"><span>Path A</span><span>Path B</span></div>
+        </div>
+        <div class="paths-column">
+          <article class="path-card analytics-path">
+            <header><span>A</span><div><p>Analytics Path</p><h2>Governed Insight</h2></div></header>
+            <div class="path-flow">
+              <button data-capability="05.5">Cleanse & Validate</button><i>→</i>
+              <button data-capability="05.1">Silver</button><i>→</i>
+              <button data-capability="05.1">Gold</button><i>→</i>
+              <button data-capability="05.6">BI & AI</button>
+            </div>
+            <p>Independent medallion processing for reporting, semantic models, data science, and AI.</p>
+          </article>
+          <article class="path-card sync-path">
+            <header><span>B</span><div><p>ERP Synchronization Path</p><h2>Controlled Action</h2></div></header>
+            <div class="path-flow">
+              <button data-capability="dispatch">Select & Dispatch</button><i>→</i>
+              <button data-capability="workers">External Worker</button><i>→</i>
+              <button data-capability="operations">Status & Retry</button>
+            </div>
+            <p>Metadata-driven work management with API, RPA, computer-use, or human-assisted destination updates.</p>
+          </article>
+        </div>
+      </div>
+      <aside class="architecture-note"><strong>Why the split matters</strong><p>An ERP outage can pause destination updates without blocking Silver/Gold processing. Failed work remains visible and replayable through the dispatch layer.</p></aside>
+      <section class="guardrails" aria-labelledby="guardrails-title">
+        <div><p class="eyebrow">Adapted Design Controls</p><h2 id="guardrails-title">Operational Guardrails</h2></div>
+        <div class="guardrail-grid">
+          <article><span>01</span><strong>Idempotent Delivery</strong><p>Treat execution as at-least-once. Every destination write needs a stable idempotency key.</p></article>
+          <article><span>02</span><strong>Version-Bound Mapping</strong><p>Bind each work item to its mapping version so a retry cannot silently adopt a changed transformation.</p></article>
+          <article><span>03</span><strong>State Reconciliation</strong><p>Prove source intent equals destination state; a worker-reported success is not sufficient evidence.</p></article>
+          <article><span>04</span><strong>Safe Queue Claims</strong><p>Use leasing, atomic status transitions, attempt limits, and poison-record handling for competing workers.</p></article>
+          <article><span>05</span><strong>Pointer Integrity</strong><p>Bronze retention and immutable record identifiers must protect dispatch pointers from becoming invalid.</p></article>
+          <article><span>06</span><strong>Backpressure Control</strong><p>Destination outages, ERP throttling, and queue growth require capacity controls—not only alerts.</p></article>
+        </div>
+      </section>
+    </section>
+
+    <section class="view content-shell page-view" data-view="decision" aria-labelledby="decision-title" hidden>
+      <div class="page-intro">
+        <p class="eyebrow">Ingestion Pattern Selector</p>
+        <h1 id="decision-title">Choose the Simplest Path into OneLake</h1>
+        <p>Work from lowest effort to highest flexibility. Escalate only when latency, transformation, or source support requires it.</p>
+      </div>
+      <div class="decision-layout">
+        <form class="decision-panel" id="decision-form">
+          <fieldset>
+            <legend>1. What latency does the business need?</legend>
+            <label><input type="radio" name="latency" value="realtime"> <span><strong>Near real-time / continuous</strong><small>CDC, operational events, streaming</small></span></label>
+            <label><input type="radio" name="latency" value="batch"> <span><strong>Batch / scheduled</strong><small>Hourly, daily, or on demand</small></span></label>
+          </fieldset>
+          <fieldset>
+            <legend>2. Where does the data live?</legend>
+            <label><input type="radio" name="source" value="database"> <span><strong>Operational database</strong><small>SQL, PostgreSQL, Snowflake, Cosmos DB, Databricks</small></span></label>
+            <label><input type="radio" name="source" value="stream"> <span><strong>Event or stream</strong><small>Event Hubs, Kafka, IoT, application events</small></span></label>
+            <label><input type="radio" name="source" value="cloud"> <span><strong>Cloud storage</strong><small>ADLS, S3, GCS, OneLake, Dataverse</small></span></label>
+            <label><input type="radio" name="source" value="files"> <span><strong>Files or other source</strong><small>Excel, CSV, JSON, SaaS, unsupported system</small></span></label>
+          </fieldset>
+          <fieldset>
+            <legend>3. How much transformation is needed on arrival?</legend>
+            <label><input type="radio" name="transform" value="none"> <span><strong>None</strong><small>Land source-aligned data as-is</small></span></label>
+            <label><input type="radio" name="transform" value="low"> <span><strong>Light / low-code</strong><small>Clean, shape, join, or filter</small></span></label>
+            <label><input type="radio" name="transform" value="complex"> <span><strong>Complex / custom</strong><small>Parameterized orchestration or pro-code logic</small></span></label>
+          </fieldset>
+          <button class="button primary submit-button" type="submit">Recommend Ingestion Pattern</button>
+        </form>
+        <aside class="recommendation-panel" id="recommendation" aria-live="polite">
+          <div class="recommendation-empty"><span aria-hidden="true">↳</span><h2>Your Recommendation Will Appear Here</h2><p>Answer the 3 questions to match the source to the lowest-effort viable Fabric pattern.</p></div>
+        </aside>
+      </div>
+      <section class="rules-strip" aria-labelledby="rules-title">
+        <p class="eyebrow">Rules of Thumb</p><h2 id="rules-title">Virtualize before you move. Configure before you code.</h2>
+        <div><article><strong>01</strong><span>Start with Shortcuts or Mirroring.</span></article><article><strong>02</strong><span>Use real-time only where value requires it.</span></article><article><strong>03</strong><span>Reserve Pipelines and Spark for the genuinely custom.</span></article></div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="capability-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-head">
+      <div><p class="eyebrow" id="dialog-category"></p><h2 id="dialog-title"></h2></div>
+      <button class="icon-button" id="dialog-close" type="button" aria-label="Close capability details">×</button>
+    </div>
+    <div class="dialog-body" id="dialog-body"></div>
+  </dialog>
+
+  <footer><span>Microsoft Fabric Reference Architecture</span><span>Prepared for Brookfield · September 2026</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
