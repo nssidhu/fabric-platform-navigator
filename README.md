@@ -71,4 +71,4 @@ This is an architecture assessment aid, not an official Microsoft product statem
 
 ## GitHub Pages
 
-The included GitHub Actions workflow deploys this static site to GitHub Pages whenever changes are pushed to `main`. In the repository settings, configure **Pages → Build and deployment → Source** to **GitHub Actions** if GitHub does not select it automatically.
+GitHub Pages publishes the static site directly from the root of the `main` branch. No build workflow is required.
