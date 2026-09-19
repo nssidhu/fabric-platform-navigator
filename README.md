@@ -4,7 +4,7 @@ An interactive, single-page capability dashboard for exploring the Microsoft Fab
 
 ## Live Dashboard
 
-The GitHub Pages URL will appear here after the repository is published.
+**https://nssidhu.github.io/fabric-platform-navigator/**
 
 ## What It Covers
 
